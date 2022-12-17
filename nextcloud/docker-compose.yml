@@ -42,8 +42,8 @@ services:
         depends_on:
           - next-app
         networks:
-          - default
           - proxiednet
+          - default
 
     next-cron:
         image: nextcloud:fpm-alpine
@@ -57,4 +57,3 @@ services:
 
 networks:
   proxiednet:
-    external: true
