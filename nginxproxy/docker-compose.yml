@@ -17,8 +17,6 @@ services:
             - "${NGINX_FILES_PATH}/dhparam:/etc/nginx/dhparam"
             - "${NGINX_FILES_PATH}/upload_size.conf:/etc/nginx/conf.d/upload_size.conf:ro"
         restart: "always"
-        networks: 
-            - proxiednet
         logging:
             options:
                 max-size: '4m'
@@ -60,8 +58,6 @@ services:
             DEFAULT_EMAIL: "${DEFAULT_EMAIL}"
             ACME_CA_URI: "${ACME_CA_URI}"
         restart: "always"
-        networks:
-            - proxiednet
         depends_on:
             - "${NGINX_WEB_SEVICE_NAME}"
         logging:
