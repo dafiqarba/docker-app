@@ -45,6 +45,7 @@ services:
     acme-companion:
         image: "nginxproxy/acme-companion:latest"
         container_name: "nginx-proxy-acme"
+        privileged: true
         volumes:
             - "${NGINX_FILES_PATH}/conf:/etc/nginx/conf.d"
             - "${NGINX_FILES_PATH}/vhost:/etc/nginx/vhost.d"
