@@ -15,7 +15,7 @@ services:
             - "${NGINX_FILES_PATH}/html:/usr/share/nginx/html:ro"
             - "${NGINX_FILES_PATH}/htpasswd:/etc/nginx/htpasswd:ro"
             - "${NGINX_FILES_PATH}/dhparam:/etc/nginx/dhparam"
-            - "${NGINX_FILES_PATH}/upload_size.conf:/etc/nginx/conf.d/upload_size.conf:ro"
+            - "${NGINX_FILES_PATH}/uploadsize.conf:/etc/nginx/conf.d/uploadsize.conf:ro"
         restart: "always"
         logging:
             options:
