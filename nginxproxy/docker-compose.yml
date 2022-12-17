@@ -9,7 +9,7 @@ services:
             - "${HTTP_PORT}"
             - "${HTTPS_PORT}"
         volumes:
-            - "${NGINX_FILES_PATH}/conf.d:/etc/nginx/conf.d:ro"
+            - "${NGINX_FILES_PATH}/conf.d:/etc/nginx/conf.d"
             - "${NGINX_FILES_PATH}/vhost.d:/etc/nginx/vhost.d:ro"
             - "${NGINX_FILES_PATH}/certs:/etc/nginx/certs:ro"
             - "${NGINX_FILES_PATH}/html:/usr/share/nginx/html:ro"
