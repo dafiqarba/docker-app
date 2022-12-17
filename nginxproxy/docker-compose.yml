@@ -34,7 +34,7 @@ services:
             - "${NGINX_FILES_PATH}/htpasswd:/etc/nginx/htpasswd:ro"
             - "${NGINX_FILES_PATH}/dhparam:/etc/nginx/dhparam"
             - "${DOCKER_GEN_FILES_PATH}/templates/nginx.tmpl:/etc/docker-gen/templates/nginx.tmpl:ro"
-            - /var/run/docker.sock:/tmp/docker.sock:ro
+            - "unix://$XDG_RUNTIME_DIR/docker.sock:/tmp/docker.sock:ro"
         restart: "always"
         logging:
             options:
