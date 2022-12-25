@@ -4,8 +4,6 @@ services:
   firefox:
     image: lscr.io/linuxserver/firefox:latest
     container_name: firefox
-    security_opt:
-      - seccomp:unconfined #optional
     environment:
       - PUID=1000
       - PGID=1000
