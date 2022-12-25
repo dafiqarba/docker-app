@@ -1,11 +1,11 @@
 version: "3.3"
 
 services:
-  nginx-proxy:
+  nginx:
     container_name: ${NGINX_WEB_SEVICE_NAME}
     build:
       context: .
-      dockerfile: setup-dockerfile/nginx.Dockerfile
+      dockerfile: docker/nginx.Dockerfile
     ports:
       - ${HTTP_PORT}:80
       - ${HTTPS_PORT}:443
