@@ -1,5 +1,7 @@
 # How to run:
 
+1. Run ``` docker compose up -d ```
+
 ```
 server {
     listen 80;
