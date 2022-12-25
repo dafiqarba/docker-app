@@ -17,12 +17,6 @@ services:
       - proxied
     restart: always
 
-services:
-  letsencrypt:
-    container_name: 'certbot-service'
-    image: certbot/certbot:v1.17.0
-    
-
   certbot:
     image: certbot/certbot
     container_name: ${CERTBOT_SERVICE_NAME}
