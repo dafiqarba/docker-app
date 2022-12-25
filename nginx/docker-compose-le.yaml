@@ -5,7 +5,7 @@ services:
     image: certbot/certbot
     container_name: ${CERTBOT_SERVICE_NAME}
     depends_on:
-      - nginx-proxy
+      - nginx
     volumes:
       # Store generated certificates
       - ${LE_FILES_PATH}/etc/letsencrypt:/etc/letsencrypt
