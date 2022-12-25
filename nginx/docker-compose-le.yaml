@@ -1,8 +1,7 @@
 version: "3.3"
 
 services:
-
-certbot:
+  certbot:
     image: certbot/certbot
     container_name: ${CERTBOT_SERVICE_NAME}
     depends_on:
