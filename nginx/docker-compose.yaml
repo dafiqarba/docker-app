@@ -1,7 +1,7 @@
 version: "3.3"
 
 services:
-  nginx:
+  nginx-reverse:
     container_name: ${NGINX_WEB_SEVICE_NAME}
     image: nginx:alpine
     ports:
@@ -12,9 +12,9 @@ services:
       - ${LE_FILES_PATH}/etc/letsencrypt:/etc/letsencrypt:ro
       - ${ACME_FILES_PATH}/tmp/acme_challenge:/tmp/acme_challenge
     networks:
-      - app
+      - ${NETWORK}
     restart: always
     
 networks:
-  app:
-    driver: bridge
+  nginx-proxy:
+    external: true
