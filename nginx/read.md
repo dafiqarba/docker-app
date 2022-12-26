@@ -1,6 +1,7 @@
 # How to run:
 
-1. Run ``` docker compose up -d ```
+1. Create network ```docker network create nginx-proxy```
+2. Run ``` docker compose up -d ```
 
 ```
 server {
